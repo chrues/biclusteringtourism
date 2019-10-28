@@ -13,6 +13,7 @@ Downloads:
 - jarCall.py
 - operationsMissingData.py
 - removeCategories.py
+- csvToText.py 
 
 Important notes: Make sure they are all located in the same directory and inside of that directory create a folder called "Outputs". This is where all of your outputs will be stored.
 
