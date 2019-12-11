@@ -19,7 +19,7 @@ Important notes: Make sure they are all located in the same directory and inside
 
 How to run the executables directly (BicFinder, BiMine+, Bicat): 
   1) Open shell
-  2) Enter following line: java -jar [Name of executable].jar [Input file] [The minimum amount of columns to be evaluated inside a dataset] [Average Spearman Index ranging between -1 and 1] [Output file].
+  2) Enter following command: java -jar [Name of executable].jar [Input file] [The minimum amount of columns to be evaluated inside a dataset] [Average Spearman Index ranging between -1 and 1] [Output file].
 Upon execution the results will be written to your output file.
 
 How to call executables indirectly (from Python):
