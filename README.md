@@ -22,13 +22,13 @@ How to run the executables directly (BicFinder, BiMine+, Bicat):
   2) Enter following line: java -jar [Name of executable].jar [Input file] [The minimum amount of columns to be evaluated inside a dataset] [Average Spearman Index ranging between -1 and 1] [Output file].
 Upon execution the results will be written to your output file.
 
-How to call executables indirectly (from Python) using jarCall.py:
+How to call executables indirectly (from Python):
   1) Open source-code editor
-  2) Open and execute jarCall.py
-  3) You will be prompted to enter name of executable of your desire and the text file you would like to pass as an argument (omit .txt)
-  4) Text file will be iterated for parameters A 2, 4 and 6, and parameters B between -0.6 and 0.6
-  5) Output files will be moved to folder "Outputs"
+  2) Open and execute the main module
+  3) You will be ask to pre-process data files (which you can deny)
+  4) You will be prompted to enter name of executable of your desire and the text file you would like to pass as an argument (omit .txt)
+  5) Text file will be iterated for parameters A 2, 4 and 6, and parameters B between -0.6 and 0.6
+  6) Shortly biclusters should be created and data statistics will be printed
+  7) Output files will be moved to folder "Outputs"
 
-Important note: If your data presents anomalies such as missing data and non-numerical values, you must run programs operationsMissingData.py and/or removeCategories.py
-
-
+Important note: Make sure the data files contain no missing values and no text
