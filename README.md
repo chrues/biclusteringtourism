@@ -19,8 +19,31 @@ Important notes: Make sure they are all located in the same directory and inside
 
 How to run the executables directly (BicFinder, BiMine+, Bicat): 
   1) Open shell
-  2) Enter following command: java -jar [Name of executable].jar [Input file] [The minimum amount of columns to be evaluated inside a dataset] [Average Spearman Index ranging between -1 and 1] [Output file].
-Upon execution the results will be written to your output file.
+  2.1) For BicFinder:
+       BicFinder.jar InputFile.txt ACSI ASR OutputFile.txt
+       where:
+        - InputFile.txt is the microarray dataset. Each line must contain only gene name with their
+          expression values. The condition names must be removed (see Input File Format). Missing
+          values are replaced by random values.
+        - ACSI is the threshold of the average correspondence similarity index (ACSI  [0..1]).
+        - ASR is the threshold of the average spearman’s rho (ASR  [-1..1]).
+        - OutputFile.txt is the result file. Each line contains one bicluster. One bicluster contains a
+          subset of genes, a subset of conditions and ASR value.
+          
+  2.2) For BiMine+:
+       BiMine+.jar InputFile.txt δ β OutputFile.txt
+       where:
+        - InputFile.txt is the microarray dataset. Each line must contain only gene name with their
+          expression values. The condition names must be removed (see Input File Format). Missing
+          values are replaced by random ones.
+        - δ is the threshold of minimum number of conditions.
+        - β is the threshold of the Average Spearman’s Rho (ASR  [-1..1]).
+        - OutputFile.txt is the result file. Each line contains one bicluster. One bicluster contains a
+          subset of genes, a subset of conditions and the ASR value. The conditions are considered as a
+          number. In fact, the conditions numbering start from 0, e.g., the first condition in the InputFile
+          is transformed in the OutputFile to 0, the second condition to 1, etc.
+          
+ The [Executable name].jar and the InputFile.txt must be in the same directory. The OutputFile will be created in the same directory.
 
 How to call executables indirectly (from Python):
   1) Open source-code editor
